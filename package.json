@@ -1,0 +1,35 @@
+{
+  "name": "missionviewer",
+  "version": "1.0.0",
+  "description": "Shows the location and path of droness",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mm1729/MissionViewer.git"
+  },
+  "keywords": [
+    "drone",
+    "mission",
+    "viewer",
+    "raspberry",
+    "pi",
+    "maps"
+  ],
+  "author": "Moulindra Muchumari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mm1729/MissionViewer/issues"
+  },
+  "homepage": "https://github.com/mm1729/MissionViewer#readme",
+  "dependencies": {
+    "mapbox-gl": "^0.41.0",
+    "@mapbox/mapbox-gl-draw": "^1.0.6"
+  },
+  "devDependencies": {
+    "electron": "^1.8.3"
+  }
+}
