@@ -1,6 +1,7 @@
 let mapboxgl = require('mapbox-gl');
 let MapboxDraw = require('@mapbox/mapbox-gl-draw');
 let path = require('path');
+let ToggleControl = require('./button.js');
 
 const mapsFolder = path.resolve(__dirname, 'maps/');
 const mapsFile = 'map.json';
@@ -26,8 +27,6 @@ var map = new mapboxgl.Map({
     // style: 'mapbox://styles/mapbox/streets-v9', // stylesheet location
     center: [-74.466, 40.5463], // starting position [lng, lat]
     zoom: 14, // starting zoom
-    pitch: 45,
-    bearing: -17.6,
     hash: true
 });
 
@@ -41,4 +40,12 @@ var draw = new MapboxDraw({
     }
 });
 
+
+// Additional controls for each UAV
+var uavs = ['main drone', 'uav 1', 'uav 2']
+var uavColors = ['#000000', '#0000FF', '#FF00FF']
+var toggle = new ToggleControl(uavs, uavColors, draw)
+map.addControl(toggle, 'top-right')
+
 map.addControl(draw);
+
